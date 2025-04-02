@@ -1,0 +1,164 @@
+
+/* Esta seria la direccion de una fuente de letra de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* !importan sirve para decirle a bootstrap "No mi rey,
+aqui las reglas lo pongo yo, no quiero tu fuente de letra fea" */
+body {
+    font-family: "Poppins", sans-serif !important; 
+    background-color: black !important;
+}
+
+/* NAVBAR SECTION */
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+    margin-left: 15px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover {
+    color: white;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.custom-navbar.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.5);
+    background: black;
+}
+
+.custom-toggler {
+    border: none;
+    outline: none;
+}
+
+.custom-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    transform: rotate(90deg);
+}
+
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)),
+    url('/assets/img/lrconcierto.png') center/cover no-repeat;
+}
+
+
+h2{
+    color: white !important;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+
+/* LIST-SECTION */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-left: 5px solid #ff0000;
+    padding-left: 15px;
+}
+
+.band-list {
+    list-style: none;
+    padding: 0;
+}
+
+.band-list li {
+    font-size: 1.3rem;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.band-list li:hover {
+    transform: scale(1.05);
+    background: rgba(255, 0, 0, 0.4);
+}
+
+.band-image {
+    max-width: 100%;
+    border-radius: 25px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.band-image:hover {
+    transform: scale(1.03);
+}
+
+
+/* FOOTER */
+footer {
+    background-color: rgb(10, 10, 10) !important;
+    color: white !important;
+}
